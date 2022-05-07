@@ -42,7 +42,7 @@ jobs:
                         - run: npm ci
                         - run: npm test
                         
-       security:
+        security:
                needs: test
                runs-on: ubuntu-latest
 
