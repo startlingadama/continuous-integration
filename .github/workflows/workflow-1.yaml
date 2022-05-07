@@ -17,11 +17,11 @@ jobs:
                 steps:
                         -uses: actions/checkout@v2
                         -name: Use Node.js ${{ matrix.node-version }}
-                         uses: actions/setup-node@v2
-                         with:
-                                 noe-version: ${{ matrix.node-version }}
-                                 cache: 'npm'
-                        - run: npm ci 
+                        uses: actions/setup-node@v2
+                        with:
+                                noe-version: ${{ matrix.node-version }}
+                                cache: 'npm'
+                        -run: npm ci 
 
 
         test:
