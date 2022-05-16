@@ -5,16 +5,19 @@
 npm install
 ```
 
-## Compiles and run
+### Compiles and run
 ```
 node app
 ```
-## Accède à l'application
-### 1 ouvrir le navigateur
-### 2 tapez r"https//localhost:9090" dans la zone de url
-### 3 vous allez trouver ce contenu dans la page :
 
-  Express
-    Welcome to Express
-### félicitations vous avez réussi .
-#### maintenant à vous de développer le reste de projet
+## Build & Run using docker
+
+### Build
+```
+docker build -t backend-app-nodejs:local .
+```
+
+### Run
+```
+docker run -it -p 9090:9090 --rm --name backend-app-nodejs-1 backend-app-nodejs:local
+```
