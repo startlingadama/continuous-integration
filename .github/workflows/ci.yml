@@ -77,8 +77,6 @@ jobs:
     
   vagrant_test:
     needs: docker
-    name: Build
-
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
