@@ -77,14 +77,14 @@ jobs:
     
   vagrant_test:
     needs: docker
-    runs-on: ubuntu-latast
+    name: Build
+
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
 
-      - uses: 5u623l20/github-actions-vagrantup@v1
+      - uses: kentahikaru/github-action-vagrant--vagrantfile-from-repository@v1
         with:
-          mem: 2048
-          box: "bento/ubuntu-20.04"
           run: |
             export AUTOCONF_VERSION=2.69
             export AUTOMAKE_VERSION=1.16
@@ -103,6 +103,3 @@ jobs:
             run sudo make install
             run file /usr/bin/ctags
             run ctags --version
-      - run: echo "Reussite" 
-    
-    
