@@ -85,7 +85,7 @@ jobs:
       - name: Install SSH Key
         uses: shimataro/ssh-key-action@v2
         with:
-          key: ${{ secrets.CD_SSH_PRIVATE_KEY }}
+          key: ${{ secrets.CD_SSH_PRIVE_KEY }}
           known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
       # L'ip du server pour la reconnaissance de host
       - name: Adding Known Hosts
